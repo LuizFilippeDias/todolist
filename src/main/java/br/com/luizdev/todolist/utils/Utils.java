@@ -24,9 +24,9 @@ public class Utils {
 
         Set<String> emptyNames = new HashSet<>();
 
-        for(PropertyDescriptor pd: pds) {
-            Object srcValue = src.getPropertyDescriptor(pd.getName());
-            if(srcValue == null) {
+        for (PropertyDescriptor pd : pds) {
+            Object srcValue = src.getPropertyValue(pd.getName());
+            if (srcValue == null) {
                 emptyNames.add(pd.getName());
             }
         }
